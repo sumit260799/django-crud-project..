@@ -1,0 +1,34 @@
+{% extends 'index.html' %}
+{% block body %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="/add_emp" method="post">
+            {% csrf_token %}
+      <label for="name">NAME</label>
+      <input type="name" id="name" name="name"><br>
+
+      <label for="location">LOCATION</label>
+      <input type="name" id="location" name="location"><br>
+
+      <label for="age">AGE</label>
+      <input type="number" id="age" name="age"><br>
+
+      <label for="salary">SALARY</label>
+      <input type="number" id="salary" name="salary"><br>
+
+      <label for="date">DATE</label>
+      <input type="date" id="date" name="date"><br>
+
+        <button type="submit">submit</button>
+
+    </form>
+    {% endblock %}
+</body>
+</html>
